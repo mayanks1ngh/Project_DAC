@@ -1,0 +1,220 @@
+#include <stdio.h>
+
+int main(void) {
+    printf("hello world\n");
+    return 0;
+}
+1.	#include <iostream>
+2.	using namespace std;
+3.	int main()
+4.	{
+5.	    cout<<"Hello World"<<endl;
+6.	}
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    const int x = 10;
+    int y = x + 10;
+    int z = y - 1; // Decrement y after assigning its value to z
+    cout << x << " " << y << " " << z << endl;
+    return 0;
+}
+#include<iostream>
+using namespace std;
+#define pi 3.14
+
+int main()
+{
+    int radius;
+    cout<<"Enter the radius of Sphere";
+    cin>>radius;
+    
+        double volume=4.0/3.0*pi*radius*radius*radius;
+        cout<<"The amoune of volume of sphere is:"<<volume<<endl;
+        return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Enter the lengths of the three sides of the triangle: ";
+    cin >> a >> b >> c;
+
+    // Check if the triangle can be formed
+    if (a + b > c && a + c > b && b + c > a) {
+        cout << "The triangle can be formed." << endl;
+
+        // Classify the type of triangle based on the lengths of its sides
+        if (a == b && b == c) {
+            cout << "The Traingle can be formed:Equilateral Traingle" << endl;
+        } else if (a == b || b == c || c == a) {
+            cout << "The Traingle can be formed:Isoceles Traingle" << endl;
+        } else {
+            cout << "The Traingle can be formed:Scalene Traingle" << endl;
+        }
+    } else {
+        cout << "The triangle cannot be formed." << endl;
+    }
+
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Enter the number";
+    cin>>num;
+    if(num==0)
+    {
+    cout<<"Number is Zero"<<endl;
+    }
+    else if(num>0)
+    {
+        cout<<"Number is postive"<<endl;
+        if(num%2==0)
+        {
+            cout<<"The Number is even";
+        }
+        else
+        {
+            cout<<"The Number is odd";
+        }
+        
+    }
+    else
+    {
+        cout<<"Number is negative"<<endl;
+    }
+    
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    string username;
+    cout<<"Enter your Username:"<<endl;;
+    getline(cin,username);
+    cout<<"Hello"<<" "<<username<<endl;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int x, y;
+
+    cout << "Enter the values of X and Y: ";
+    cin >> x >> y;
+
+    // Swap using XOR operation (efficient and avoids overflow)
+    x = x ^ y;
+    y = x ^ y;
+    x = x ^ y;
+
+    cout << "After swapping:" << endl;
+    cout << "X = " << x << endl;
+    cout << "Y = " << y << endl;
+
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+bool isLeapYear(int year) {
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+int main()
+{
+    int year;
+    cout<<"Enter the year:"<<endl;
+    cin>>year;
+    if(isLeapYear(year))
+    {
+        cout<<year<<" is a leap year."<<endl;
+    }
+    else
+    {
+        cout<<year<<" is not a leap year."<<endl;
+    }
+
+return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x,y;
+    cout<<"Enter the two numbers"<<endl;
+    cin>>x>>y;
+    int z=x%y;
+    cout<<z<<endl;
+
+}
+
+#include<iostream>
+using namespace std;
+int calarea(int x,int y)
+{
+    int area=x*y;
+    cout<<"The area of rectangle is: "<<area<<endl;
+    return area;
+}
+int main()
+{
+    int x,y;
+    cout<<"Enter the sides of the rectangle:"<<endl;
+    cin>>x>>y;
+    calarea(x,y);
+    return 0;
+
+}
+
+
+#include<iostream>
+using namespace std;
+int calarea(int x)
+{
+    int area=x*x;
+    cout<<"The area of square is: "<<area<<endl;
+    return area;
+}
+int main()
+{
+    int x;
+    cout<<"Enter the side of the square:"<<endl;
+    cin>>x;
+    calarea(x);
+    return 0;
+
+}
+
+#include<iostream>
+using namespace std;
+#define pi 3.14
+int main()
+{
+    double radius;
+    cout<<"Enter the radius of the circle:"<<endl;
+    cin>>radius;
+    double area=pi*radius*radius;
+    cout<<"The area of the circle is:"<<area<<endl;
+    double circumference=2*pi*radius;
+    cout<<"The Circumference of the circle is:"<<circumference<<endl;
+    return 0;
+}
